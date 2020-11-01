@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/detectivebgr"
+    tools:context=".ui.WinnerActivity">
+
+    <TextView
+        android:id="@+id/congrats"
+        android:layout_width="345dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/custom_button_instructions"
+        android:backgroundTint="#FF6969"
+        android:fontFamily="@font/black_ops_one"
+        android:text="congrats detective inbar! you win!"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="close game"
+        android:backgroundTint="#FF6969"
+        android:background="@drawable/custom_button_instructions"
+        android:fontFamily="@font/black_ops_one"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/congrats" />
+</androidx.constraintlayout.widget.ConstraintLayout>

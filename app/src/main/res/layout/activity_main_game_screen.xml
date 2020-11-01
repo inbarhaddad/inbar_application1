@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/messy"
+    tools:context=".ui.MainGameScreen">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="209dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="63dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="119dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="184dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="76dp" />
+
+
+    <TextView
+        android:id="@+id/locationTheProHouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/custom_button_instructions"
+        android:backgroundTint="#AB025E06"
+        android:fontFamily="@font/black_ops_one"
+        android:text="  you are located in: &quot;the proffesor's house&quot;  "
+        android:textColor="#0E0000"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/guideline7" />
+
+    <TextView
+        android:id="@+id/howMuchCluesFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/custom_button_instructions"
+        android:backgroundTint="#AB025E06"
+        android:fontFamily="@font/black_ops_one"
+        android:text="  0/3 clues have found  "
+        android:textColor="#C8BDBD"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/locationTheProHouse" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="97dp" />
+
+    <TextView
+        android:id="@+id/runningBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/custom_button_instructions"
+        android:backgroundTint="#D7095C00"
+        android:fontFamily="@font/bitter_bold"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="This investigation is running by: inbar haddad"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline8" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="55dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/spy" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="66dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/magnifyingglass" />
+
+    <TextView
+        android:id="@+id/collectedClues"
+        android:layout_width="92dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/custom_button_instructions"
+        android:backgroundTint="#D7095C00"
+        android:fontFamily="@font/bitter_bold"
+        android:paddingLeft="7dp"
+        android:text="collected clues:"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toEndOf="@+id/imageView17"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cluesList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="5dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#AD4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <ImageView
+        android:id="@+id/keyClue"
+        android:layout_width="36dp"
+        android:layout_height="52dp"
+        android:onClick="onClickItem"
+        android:tag="key"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/locationTheProHouse"
+        app:srcCompat="@drawable/clue1" />
+
+    <ImageView
+        android:id="@+id/lockerClue"
+        android:layout_width="59dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="68dp"
+        android:onClick="onClickItem"
+        android:tag="locker"
+        app:layout_constraintEnd_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:srcCompat="@drawable/locker" />
+
+    <ImageView
+        android:id="@+id/tableClue"
+        android:layout_width="134dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="28dp"
+        android:onClick="onClickItem"
+        android:tag="table"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:srcCompat="@drawable/table" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
