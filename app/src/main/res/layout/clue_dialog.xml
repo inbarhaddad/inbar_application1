@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/clueIcon"
+        android:id="@+id/iconClue"
         android:layout_width="200dp"
         android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,5 +28,5 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clueIcon" />
+        app:layout_constraintTop_toBottomOf="@+id/iconClue" />
 </androidx.constraintlayout.widget.ConstraintLayout>

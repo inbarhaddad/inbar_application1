@@ -1,5 +1,6 @@
 package com.example.inbar_application1.ui;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,14 +11,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.inbar_application1.R;
+import com.example.inbar_application1.model.CluesOnClick;
 
 import java.util.ArrayList;
 
 public class ClueAdapter extends RecyclerView.Adapter<ClueAdapter.ClueViewHolder> {
     private ArrayList<Clue> clues;
+    private Context context;
 
-    public ClueAdapter(ArrayList<Clue> clues) {
+    public ClueAdapter(ArrayList<Clue> clues, Context context ) {
         this.clues = clues;
+        this.context = context;
     }
 
     @NonNull
@@ -29,9 +33,16 @@ public class ClueAdapter extends RecyclerView.Adapter<ClueAdapter.ClueViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ClueViewHolder holder, int position) {
-        Clue currentClue = clues.get(position);
+        final Clue currentClue = clues.get(position);
         holder.decriptionTextView.setText(currentClue.getDescription());
         holder.iconImageView.setImageResource(currentClue.getIcon());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CluesOnClick cluesOnClick = (CluesOnClick) context;
+                cluesOnClick.onClickClueListener(currentClue);
+            }
+        });
     }
 
     @Override
