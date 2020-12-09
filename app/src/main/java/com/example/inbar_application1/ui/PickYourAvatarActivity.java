@@ -24,6 +24,7 @@ public class PickYourAvatarActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
     }
 
+
     public void startPlay(View view) {
         startActivity(new Intent(this, InstructionsActivity.class));
     }
