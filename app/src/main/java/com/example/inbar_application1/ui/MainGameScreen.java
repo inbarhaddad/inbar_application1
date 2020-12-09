@@ -57,8 +57,8 @@ public class MainGameScreen extends AppCompatActivity implements CluesOnClick {
     public  void onClickItem(View view){
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.clue_dialog);
-        Dialog moveScreen = new Dialog(this);
-        dialog.setContentView(R.layout.moving_screen_dialog);
+//        Dialog moveScreen = new Dialog(this);
+//        dialog.setContentView(R.layout.moving_screen_dialog);
         Clue clue = new Clue(1, view.getTag().toString(),0);
         if(view.getTag().toString().equals("key") && !checkIfExists("key")){
             clue.setIcon(R.drawable.clue1);
@@ -76,7 +76,7 @@ public class MainGameScreen extends AppCompatActivity implements CluesOnClick {
                 Clue note = new Clue(1, "locker",R.drawable.note);
                 clues.add(note);
                 ((ImageView)dialog.findViewById(R.id.iconClue)).setImageResource(note.getIcon());
-                ((TextView)dialog.findViewById(R.id.clueDescription)).setText("you opend the locker! that was whats inside!");
+                ((TextView)dialog.findViewById(R.id.clueDescription)).setText("you opened the locker! that was whats inside!");
             }
             else{
                 ((ImageView)dialog.findViewById(R.id.iconClue)).setImageResource(clue.getIcon());
