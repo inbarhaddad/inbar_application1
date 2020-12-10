@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.Layout;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EdgeEffect;
@@ -103,11 +105,22 @@ public class MainGameScreen extends AppCompatActivity implements CluesOnClick {
         if (view.getTag().toString().equals("done")){
             if (checkIfAllCollected()){
                 dialog.setContentView(R.layout.moving_screen_dialog);
-                EditText edit=(EditText)dialog.findViewById(R.id.type);
-                String text=edit.getText().toString();
-                if(text.equals("attic")){
-                    startActivity(new Intent(MainGameScreen.this, AtticScreen.class));
-                }
+                final EditText edit=(EditText)dialog.findViewById(R.id.type);
+                edit.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    }
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    }
+                    @Override
+                    public void afterTextChanged(Editable s) {
+                        String text= edit.getText().toString();
+                        if(text.equals("attic")){
+                            startActivity(new Intent(MainGameScreen.this, AtticScreen.class));
+                        }
+                    }
+                });
             }
             dialog.show();
         }
