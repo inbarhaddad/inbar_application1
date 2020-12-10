@@ -8,15 +8,6 @@
     tools:context=".ui.MainGameScreen">
 
 
-    <FrameLayout
-        android:id="@+id/framelayout_room"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
@@ -130,7 +121,7 @@
         android:id="@+id/collectedClues"
         android:layout_width="92dp"
         android:layout_height="42dp"
-        android:layout_marginEnd="1dp"
+        android:layout_marginEnd="5dp"
         android:background="@drawable/custom_button_instructions"
         android:backgroundTint="#D7095C00"
         android:fontFamily="@font/bitter_bold"
@@ -178,17 +169,31 @@
         app:srcCompat="@drawable/locker" />
 
     <ImageView
-        android:id="@+id/tableClue"
-        android:layout_width="134dp"
-        android:layout_height="98dp"
-        android:layout_marginTop="28dp"
+        android:id="@+id/table"
+        android:layout_width="127dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="160dp"
         android:onClick="onClickItem"
         android:tag="table"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.462"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.338"
         app:srcCompat="@drawable/table" />
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="108dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginBottom="348dp"
+        android:background="@drawable/custom_button_instructions"
+        android:fontFamily="@font/bitter_bold"
+        android:onClick="onClickItem"
+        android:tag="done"
+        android:text="all done here"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
