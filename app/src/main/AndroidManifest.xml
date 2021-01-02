@@ -10,21 +10,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.AtticScreen"></activity>
+        <activity android:name=".ui.LoserActivity"></activity>
+
+        <activity android:name=".ui.AtticScreen" android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity"></activity>
         <activity android:name=".ui.WinnerActivity" />
         <activity android:name=".ui.PickYourAvatarActivity" />
         <activity android:name=".ui.OpenScreenActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ui.InstructionsActivity" />
-        <activity
-            android:name=".ui.MainGameScreen"
+        <activity  android:name=".ui.MainGameScreen"
             android:screenOrientation="landscape"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="LockedOrientationActivity" >
+           <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+        </activity>
         <activity android:name=".ui.SingelItemActivity" />
         <activity android:name=".ui.MainActivity" />
 

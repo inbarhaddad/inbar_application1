@@ -4,9 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/messy"
+
     tools:context=".ui.MainGameScreen">
 
+
+    <FrameLayout
+        android:id="@+id/frame_layout_screen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </FrameLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -150,7 +163,7 @@
         android:id="@+id/keyClue"
         android:layout_width="36dp"
         android:layout_height="52dp"
-        android:onClick="onClickItem"
+
         android:tag="key"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/locationTheProHouse"
@@ -162,7 +175,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="168dp"
         android:layout_marginEnd="68dp"
-        android:onClick="onClickItem"
+
         android:tag="locker"
         app:layout_constraintEnd_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
@@ -173,7 +186,7 @@
         android:layout_width="127dp"
         android:layout_height="86dp"
         android:layout_marginStart="160dp"
-        android:onClick="onClickItem"
+
         android:tag="table"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -183,12 +196,13 @@
 
     <Button
         android:id="@+id/done"
-        android:layout_width="108dp"
-        android:layout_height="36dp"
-        android:layout_marginEnd="240dp"
-        android:layout_marginBottom="348dp"
+        android:layout_width="98dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/custom_button_instructions"
         android:fontFamily="@font/bitter_bold"
+
         android:onClick="onClickItem"
         android:tag="done"
         android:text="all done here"
