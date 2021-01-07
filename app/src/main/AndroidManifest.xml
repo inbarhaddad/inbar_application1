@@ -17,17 +17,17 @@
         <activity android:name=".ui.WinnerActivity" />
         <activity android:name=".ui.PickYourAvatarActivity" />
         <activity android:name=".ui.OpenScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".ui.InstructionsActivity" />
         <activity  android:name=".ui.MainGameScreen"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
-           <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
         </activity>
         <activity android:name=".ui.SingelItemActivity" />
         <activity android:name=".ui.MainActivity" />

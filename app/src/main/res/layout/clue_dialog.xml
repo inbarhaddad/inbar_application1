@@ -4,26 +4,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/excited"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/clueDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="46dp"
-        android:fontFamily="@font/black_ops_one"
-        android:text="TextView"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#AB025E06"
+        android:fontFamily="@font/arbutus"
+        android:text="TextView"
         android:textColor="#000000"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iconClue" />
 
     <ImageView
         android:id="@+id/iconClue"
-        android:layout_width="219dp"
-        android:layout_height="211dp"
+        android:layout_width="220dp"
+        android:layout_height="160dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

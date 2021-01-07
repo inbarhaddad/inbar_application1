@@ -9,11 +9,11 @@
 
     <TextView
         android:id="@+id/theStory"
-        android:layout_width="315dp"
-        android:layout_height="394dp"
+        android:layout_width="342dp"
+        android:layout_height="368dp"
         android:layout_marginTop="120dp"
         android:background="#95780E0E"
-        android:fontFamily="@font/bitter_bold"
+        android:fontFamily="sans-serif-medium"
         android:lineSpacingMultiplier="1.2"
         android:text=" you are a private investigator\n in a verry small town.\n
 everything was quiet,\n
@@ -33,7 +33,7 @@ he asks for you to help him find what really happend.\n
 will you solve the mystory? "
         android:textColor="#FFFFFF"
         android:textDirection="firstStrongLtr"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="@+id/guideline6"

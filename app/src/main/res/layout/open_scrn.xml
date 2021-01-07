@@ -47,7 +47,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/bitter_bold"
+        android:fontFamily="@font/black_ops_one"
         android:text="think you can handle the job?"
         android:textColor="#E10E0E"
         android:textSize="18sp"
